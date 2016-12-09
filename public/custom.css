@@ -1,0 +1,114 @@
+/*specific to project*/
+.title {
+  background-color: gray;
+  color: white;
+}
+.green {
+  color: green;
+}
+.amber {
+  color: orange;
+}
+.red {
+  color: red;
+}
+div.pivoted-table {
+  display: none; 
+}
+
+@media screen and (max-width: 1024px) {
+  table.main thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  div.pivoted-table {
+    display: block;
+  }
+  div.default-table {
+    display: none;
+  }
+  table.main tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+  }
+  table.main td {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    text-align: right;
+  }
+  table.main td div {
+    display: none;
+  }
+  table.main td:before {
+    content: attr(data-label);
+    float: left;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    width: 45%;
+    margin-right: 5%
+  }
+  table.main td:after {
+    content: attr(data-value);
+    text-align: right;
+    width: 45%;
+    margin-left: 5%
+  }
+  table.main .title {
+    font-family: Sanchez, Sans-Serif;
+    background-color: #009FDA;
+    color: white;
+  }
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid black;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 10px solid black; 
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.sort {
+  display: inline;
+  text-align: center;
+  color: black;
+}
+button:hover {
+  background-color: #adadad;
+}
+.column {
+  margin-bottom: 10px;
+}
+button {
+  width: 55%;
+  max-width: 55%;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  border-color: #a1a1a1;
+  background-color: #a1a1a1;
+}
+button.pressed {
+  border-style: inset;
+  background-color: #a6a6a6;
+}
+/*^specific to project*/

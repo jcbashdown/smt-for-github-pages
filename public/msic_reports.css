@@ -1,0 +1,167 @@
+@font-face {
+	font-family: 'Sanchez';
+	src: url('fonts/sanchezregular.otf');
+}
+body {
+  font-family: Arial, Sans-Serif;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+.content {
+	padding: 0 3% 0 3%;
+  border: 4px solid #009FDA;
+}
+#title-bar {
+  background-color: #009FDA;
+  padding: 10px;
+  font-size: 15pt;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+  font-family: Sanchez, Sans-Serif;
+  padding-left: 15%;
+}
+#banner {
+	top: 35px;
+	position: relative;
+}
+.logo > img {
+	margin-top: 20px;
+	width: 20%;
+	margin-bottom: 20px;
+}
+.logo:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.header {
+	margin-top: 40px;
+	font-family: Sanchez, Sans-Serif;
+	font-weight: bold;
+	font-size: 13pt;
+}
+.header:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.header-item{
+	padding: 10px;
+	float: left;
+	cursor: pointer;
+	background-color: #ccc;
+	border-radius: 5px 5px 0 0;
+	border: none;
+	text-align: center;
+	margin-right: 5px;
+}
+.header-item.selected{
+	background-color: #009FDA;
+	color: #fff;
+	padding: 12px;
+}
+.introduction{
+	width: 100%;
+	text-align: justify;
+  padding-bottom: 30px;
+}
+#idnr_title_1,#idnr_title_2{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+	font-family: Arial, Sans-Serif;
+}
+#idnr_title_1>label,#idnr_title_2>label{
+	font-weight: bold;
+}
+label[for*='todate'], button {
+  margin-left: 30px;
+}
+button[id*='_filter'] {
+    background-color: #eee;
+    border: none;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+    color: black;
+}
+button[id*='_filter']:hover {
+    background-color: #009FDA;
+    color: white;
+}
+button[id*='_filter']:focus {
+	outline: none;
+}
+table {
+	border: 1px solid;
+	margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+td, th {
+	border: 1px solid #000;
+	text-align: center;
+	color: black;
+	background: #eee;
+	color: #777;
+	padding: 10px;
+  vertical-align: top;
+}
+tr:first-child>th {
+	font-family: Sanchez, Sans-Serif;
+	background-color: #009FDA;
+	color: white;
+}
+table .names>td {
+	width: 32%;
+}
+@media print{
+	body {
+		margin: 0;
+	}
+
+	#title-bar {
+		padding: 0;
+    position: absolute;
+	}
+
+	.header {
+		font-size: 10pt;
+		color: white;
+	}
+
+	.header-item.selected{
+		color: black;
+	}
+
+  .header-item:not(.selected){
+    display: none;
+  }
+
+	tr:first-child>th {
+		color: black;
+		font-weight: bold;
+	}
+
+	select[id*='_filters'],input[id*='_fromdate'],input[id*='_todate'] {
+		width: auto;
+	}
+
+	select[id*='_filters'],input[id*='_fromdate'],input[id*='_todate']:after {
+		clear: both;
+	}
+
+	label[for*='_fromdate'], button {
+		margin-left: 0;
+	}
+
+	button {
+		display: none;
+	}
+}

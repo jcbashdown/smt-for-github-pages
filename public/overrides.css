@@ -1,0 +1,19 @@
+/*specific to project, overriding generic msic css*/
+table {
+	width: auto;
+  /*default is 16*/
+  font-size: 12px;
+  table-layout:fixed;
+  width:100%;
+}
+td {
+  padding: 5px;
+}
+button {
+  margin-left: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/*^specific to project, overriding generic msic css*/
